@@ -30,12 +30,12 @@ namespace WinFormsApp_EmployeeManagement
         private void InitializeComponent()
         {
             this.PnControls = new System.Windows.Forms.Panel();
+            this.BtnSearch = new System.Windows.Forms.Button();
+            this.TxtSearchValue = new System.Windows.Forms.TextBox();
             this.BtnDelete = new System.Windows.Forms.Button();
             this.BtnUpdate = new System.Windows.Forms.Button();
             this.BtnInsert = new System.Windows.Forms.Button();
             this.DgvEmployeeList = new System.Windows.Forms.DataGridView();
-            this.TxtSearchValue = new System.Windows.Forms.TextBox();
-            this.BtnSearch = new System.Windows.Forms.Button();
             this.PnControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvEmployeeList)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +52,23 @@ namespace WinFormsApp_EmployeeManagement
             this.PnControls.Name = "PnControls";
             this.PnControls.Size = new System.Drawing.Size(1000, 171);
             this.PnControls.TabIndex = 0;
+            // 
+            // BtnSearch
+            // 
+            this.BtnSearch.Location = new System.Drawing.Point(476, 12);
+            this.BtnSearch.Name = "BtnSearch";
+            this.BtnSearch.Size = new System.Drawing.Size(94, 32);
+            this.BtnSearch.TabIndex = 4;
+            this.BtnSearch.Text = "Search";
+            this.BtnSearch.UseVisualStyleBackColor = true;
+            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
+            // 
+            // TxtSearchValue
+            // 
+            this.TxtSearchValue.Location = new System.Drawing.Point(101, 12);
+            this.TxtSearchValue.Name = "TxtSearchValue";
+            this.TxtSearchValue.Size = new System.Drawing.Size(342, 32);
+            this.TxtSearchValue.TabIndex = 3;
             // 
             // BtnDelete
             // 
@@ -95,23 +112,7 @@ namespace WinFormsApp_EmployeeManagement
             this.DgvEmployeeList.RowTemplate.Height = 29;
             this.DgvEmployeeList.Size = new System.Drawing.Size(1000, 369);
             this.DgvEmployeeList.TabIndex = 1;
-            // 
-            // TxtSearchValue
-            // 
-            this.TxtSearchValue.Location = new System.Drawing.Point(101, 12);
-            this.TxtSearchValue.Name = "TxtSearchValue";
-            this.TxtSearchValue.Size = new System.Drawing.Size(342, 32);
-            this.TxtSearchValue.TabIndex = 3;
-            // 
-            // BtnSearch
-            // 
-            this.BtnSearch.Location = new System.Drawing.Point(476, 12);
-            this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(94, 32);
-            this.BtnSearch.TabIndex = 4;
-            this.BtnSearch.Text = "Search";
-            this.BtnSearch.UseVisualStyleBackColor = true;
-            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
+            this.DgvEmployeeList.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgvEmployeeList_CellFormatting);
             // 
             // FrmManagement
             // 
